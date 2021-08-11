@@ -1,5 +1,5 @@
-FROM 9.5 슬림 : 데비안
+FROM debian:9.5-slim
 
-추가 entrypoint.sh /entrypoint.sh
- 실행 chmod +x /entrypoint.sh
- ENTRYPOINT [ "/entrypoint.sh" ]
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
